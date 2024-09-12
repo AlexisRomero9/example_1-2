@@ -14,6 +14,8 @@ int main()
    gasDetector.mode(PullDown); //Mensaje al objeto DigitalIn, el método utilizado es void mode() de la clase
    overTempDetector.mode(PullDown);//Mensaje al objeto DigitalIn, el método utilizado es void mode() de la clase
    while (true) {
+       printf("Estado de Gasdetector: %d\n",gasDetector.read());
+       printf("Estado de overTempDetector: %d\n",overTempDetector.read());
       
       if ( gasDetector || overTempDetector ) {
           //La clase a la que se accede es DigitalIn, se utiliza el método int read(), que utiliza un método
